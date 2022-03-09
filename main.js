@@ -22,7 +22,7 @@ function submitIssue(e) {
   fetchIssues();
   e.preventDefault();
 }
-
+// function name fixed
 const setStatusClosed = (id) => {
   const issues = JSON.parse(localStorage.getItem("issues"));
   const currentIssue = issues.find((issue) => +issue.id === id); // bug fixed here
@@ -43,6 +43,7 @@ const fetchIssues = () => {
   const issuesList = document.getElementById("issuesList");
   issuesList.innerHTML = "";
   if (!issues) {
+    // if length not found from local storage fixed
     return;
   }
   for (var i = 0; i < issues.length; i++) {
